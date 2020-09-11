@@ -1,12 +1,15 @@
 # importing the requests library 
 import requests 
-  
+
+print("#################################")
+print("############ CLIENTE ############")
+print("#################################\n")
 
 # Funciones de peticiones
 def create_food_request(comida):
     print("\n------- Inicio de Peticion -------")    
     print("Enviando un pedido de", comida, "al restaurante")    
-    r = requests.post(url = "http://localhost:3000/request_food", data = {'food': comida})           
+    r = requests.post(url = "http://localhost:5000/orderfood", json = {'food': comida})        
     print("El restaurante respondio", r.json())
     print("------- Peticion terminada -------\n")  
 
@@ -14,7 +17,7 @@ def create_food_request(comida):
 def ask_state_restaurant(identifier):    
     print("\n------- Inicio de Peticion -------")    
     print("Solicitando al restaurante el estado del pedido", identifier, "...")
-    r = requests.get(url = "http://localhost:3000/ask_state", params = {'id':identifier})  
+    r = requests.get(url = "http://localhost:5000/restaurantstate/"+identifier)  
     print("El restaurante respondio", r.json())
     print("------- Peticion terminada -------\n")  
 
@@ -22,13 +25,12 @@ def ask_state_restaurant(identifier):
 def ask_state_driver(identifier):    
     print("\n------- Inicio de Peticion -------")  
     print("Solicitando al repartidor el estado del pedido", identifier, "...")
-    r = requests.get(url = "http://localhost:3200/ask_state", params = {'id':identifier})  
+    r = requests.get(url = "http://localhost:5000/driverstate/"+identifier)  
     print("El repartidor respondio", r.json())
     print("------- Peticion terminada -------\n")  
 
 # Funciones de GUI
-def show_menu():
-    print("Aplicacion Cliente")
+def show_menu():    
     print("1. Solicitar un pedido al restaurante")
     print("2. Verificar el estado del pedido al restaurante")
     print("3. Verificar el estado del pedido al repartidor")
