@@ -3,7 +3,7 @@
 
 ### Luis Fernando Lizama - 201602656
 
-#Creación de Artefactos
+# Creación de Artefactos
 Las configuraciones se encuentran dentro del archivo gulpfile.js para crear los artefactos de cada una de las aplicaciones ejecutamos el siguiente comando
 ```javascript
 npm install
