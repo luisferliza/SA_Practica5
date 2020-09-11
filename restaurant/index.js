@@ -8,9 +8,9 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-console.log("#################################")
-console.log("########## Restaurante ##########")
-console.log("#################################\n")
+console.log("##################################")
+console.log("########## Restaurante ###########")
+console.log("##################################\n")
 
 
 app.post('/request_food', (req, res) => {    
