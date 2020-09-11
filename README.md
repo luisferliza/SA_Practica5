@@ -6,7 +6,7 @@
 # Creación de Artefactos
 Las configuraciones se encuentran dentro del archivo gulpfile.js para crear los artefactos de cada una de las aplicaciones ejecutamos el siguiente comando
 ```javascript
-npm install
+gulp
 ```
 Este comando creará la carpeta "dist" que contendrá 4 archivos comprimidos, los cuales son:
 - Client
