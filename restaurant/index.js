@@ -8,9 +8,9 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-console.log("#################################")
-console.log("########## Restaurante ##########")
-console.log("#################################\n")
+console.log("##################################")
+console.log("########## Restaurante ###########")
+console.log("##################################\n")
 
 
 app.post('/request_food', (req, res) => {    
@@ -40,7 +40,7 @@ app.get('/notify_driver', (req, res) => {
         res.status(200).send({ "message": `Orden 123456 notificada correctamente` });
       })
       .catch(function (error) {
-        res.status(201).send({ "message": `Ocurrio un error al notificar la orden` });
+        res.status(200).send({ "message": `Ocurrio un error al notificar la orden` });
       });    
     console.log("----------------- Finalizo la peticion ----------------\n")
 });
