@@ -8,8 +8,10 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+console.log("##################################")
+console.log("########## Restaurante ###########")
+console.log("##################################\n")
 
-console.log('Restaurante')
 
 app.post('/request_food', (req, res) => {    
     console.log("\n------- Se recibio una peticion -------")
@@ -30,7 +32,7 @@ app.get('/ask_state', (req, res) => {
 app.get('/notify_driver', (req, res) => {    
     console.log("\n------- Se enviara una peticion al repartidor -------")    
     console.log(`Se esta notificando que el pedido ${123456} esta listo`)
-    axios.post('http://localhost:3200/notify_order', {
+    axios.post('http://localhost:5000/notify_driver', {
         id: '12345'        
       })
       .then(function (response) {
@@ -38,7 +40,7 @@ app.get('/notify_driver', (req, res) => {
         res.status(200).send({ "message": `Orden 123456 notificada correctamente` });
       })
       .catch(function (error) {
-        res.status(200).send({ "message": `Ocurrio un error al notificar la orden` });
+        res.status(201).send({ "message": `Ocurrio un error al notificar la orden` });
       });    
     console.log("----------------- Finalizo la peticion ----------------\n")
 });
