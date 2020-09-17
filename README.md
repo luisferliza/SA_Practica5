@@ -3,6 +3,17 @@
 
 ### Luis Fernando Lizama - 201602656
 
+El video de demostracion de este proyecto puede encontrarse en  [este enlace](https://youtu.be/McZ7ILGPgQw "Video")
+
+# Correr pruebas unitarias
+```javascript
+mocha
+```
+# Ejecutar SonarQube
+```javascript
+sonar-scanner
+```
+
 # Creación de Artefactos
 Las configuraciones se encuentran dentro del archivo gulpfile.js para crear los artefactos de cada una de las aplicaciones ejecutamos el siguiente comando
 ```javascript
