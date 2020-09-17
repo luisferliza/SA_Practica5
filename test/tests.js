@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 const createNewOrder = require('../src/order').createNewOrder;
-const createNewOrder = require('../src/order').getOrderDescription;
-const createNewOrder = require('../src/order').getOrderStatus;
+const getOrderDescription = require('../src/order').getOrderDescription;
+const getOrderStatus = require('../src/order').getOrderStatus;
 
 describe('GetOrderDescription', function(){
     it('app should return Sushi', function(){
