@@ -1,5 +1,5 @@
 # Laboratorio Software Avanzado
-## Practica No. 5
+## Practica No. 6
 
 ### Luis Fernando Lizama - 201602656
 
